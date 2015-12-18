@@ -5,7 +5,6 @@ import org.glassfish.jersey.client.ClientConfig;
 import org.mule.api.ConnectionException;
 import org.mule.api.ConnectionExceptionCode;
 import org.mule.modules.australiapost.config.ConnectorConfig;
-import org.mule.modules.australiapost.utils.UrlBuilder;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -23,7 +22,7 @@ public abstract class AbstractClient {
         Client client = ClientBuilder.newClient(clientConfig);
 
         this.connectorConfig = connectorConfig;
-        this.target = client.target(UrlBuilder.buildUrl(connectorConfig.getHost(), connectorConfig.getPort(), connectorConfig.isHttps()) );
+        this.target = client.target(connectorConfig.getApiUrl());
     }
 
     protected void evaluateResponse(Response response) throws ConnectionException {

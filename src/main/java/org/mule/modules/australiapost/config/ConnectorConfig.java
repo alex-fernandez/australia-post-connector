@@ -12,7 +12,7 @@ import org.mule.api.annotations.display.Password;
 import org.mule.api.annotations.Configurable;
 import org.mule.api.annotations.param.Default;
 
-@ConnectionManagement(friendlyName = "Austalia Post Configuration")
+@ConnectionManagement(friendlyName = "Australia Post Configuration")
 public class ConnectorConfig {
 
     @Configurable
