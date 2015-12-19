@@ -1,0 +1,67 @@
+{
+  "shipments": [
+    {
+      "shipment_id": "2b35389f3597099d89043145",
+      "shipment_reference": "11005-2873",
+      "shipment_creation_date": "2015-08-13T12:45:05+10:00",
+      "customer_reference_1": "100170762",
+      "from": {
+        "lines": [
+          "26-60 Broadway"
+        ],
+        "suburb": "Chippendale",
+        "postcode": "2008",
+        "state": "NSW",
+        "name": "Glue Store Central Park"
+      },
+      "to": {
+        "lines": [
+          "51 Tuffy Ave"
+        ],
+        "suburb": "SANS SOUCI",
+        "postcode": "2219",
+        "state": "NSW",
+        "name": "tanna j",
+        "business_name": "tanna j",
+        "email": "taannaa.x@hotmail.com",
+        "phone": "0426232219"
+      },
+      "items": [
+        {
+          "weight": 10,
+          "height": 10,
+          "length": 10,
+          "width": 10,
+          "authority_to_leave": false,
+          "item_id": "697b42592de82b312a227968",
+          "item_reference": "ST157004WHT-1-3",
+          "tracking_details": {
+            "article_id": "ABC0001288A44",
+            "consignment_id": "ABC000128",
+            "barcode_id": "019931265099999891JDY000001601000600201|4203000|9254516251|8008150501100611"
+          },
+          "product_id": "T28S",
+          "item_summary": {
+            "total_cost": 20.7,
+            "total_gst": 1.88,
+            "status": "Created"
+          },
+          "label": {
+            "label_url": "https://ap-prod-ddc-stack-content.s3.amazonaws.com/devtestbed-prod-01/ABC0001288A44.pdf?AWSAccessKeyId=AKIAJZ2VLLVH5FAWOGYA&Expires=1439520436&Signature=FODGfavEH1NCGpCwTsczAbEW3wk%3D",
+            "status": "Available",
+            "errors": []
+          }
+        }
+      ],
+      "shipment_summary": {
+        "total_cost": 20.7,
+        "total_gst": 1.88,
+        "status": "Created",
+        "tracking_summary": {
+          "Created": 1
+        },
+        "number_of_items": 1
+      }
+    }
+  ]
+}

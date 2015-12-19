@@ -1,0 +1,41 @@
+{
+  "order":{
+    "order_id":"b1dbe3868c323bba",
+    "order_creation_date":"2015-08-19T12:12:41+10:00",
+    "order_summary":{
+      "total_cost":20.70,
+      "total_gst":1.88,
+      "status":"Initiated",
+      "tracking_summary":{
+        "Initiated":1
+      },
+      "number_of_shipments":1
+    },
+    "shipments":[
+      {
+        "shipment_id":"e0d37f879f9011a1129dd11d",
+        "to":{
+          "lines":[
+            "51 Tuffy Ave"
+          ],
+          "suburb":"SANS SOUCI",
+          "postcode":"2219",
+          "state":"NSW",
+          "name":"tanna j",
+          "business_name":"tanna j",
+          "email":"taannaa.x@hotmail.com",
+          "phone":"0426232219"
+        },
+        "shipment_summary":{
+          "total_cost":20.70,
+          "total_gst":1.88,
+          "status":"Initiated",
+          "tracking_summary":{
+            "Initiated":1
+          },
+          "number_of_items":1
+        }
+      }
+    ]
+  }
+}
