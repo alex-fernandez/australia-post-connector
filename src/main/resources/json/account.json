@@ -1,0 +1,97 @@
+{
+  "account_number": "0031008330",
+  "name": "Abc Xyz Co",
+  "valid_from": "2014-02-24",
+  "valid_to": "2999-12-31",
+  "expired": false,
+  "addresses": [
+    {
+      "type": "MERCHANT_LOCATION",
+      "lines": [
+        "1 Main Street",
+        "Melbourne"
+      ],
+      "suburb": "CHADSTONE",
+      "postcode": "3000",
+      "state": "VIC"
+    }
+  ],
+  "details": {
+    "acn": "123456789",
+    "contact_number": "0312345678",
+    "email_address": "abcxyz_DONOTUSE@abcxyz.com.au",
+    "lodgement_postcode": "3000"
+  },
+  "postage_products": [
+    {
+      "type": "PARCEL POST",
+      "group": "Parcel Post",
+      "product_id": "T28",
+      "contract": {
+        "valid_from": "2014-01-31",
+        "valid_to": "2015-01-31",
+        "expired": true,
+        "volumetric_pricing": true,
+        "max_item_count": 0,
+        "cubing_factor": 250
+      },
+      "options": {
+        "signature_on_delivery_option": false,
+        "authority_to_leave_option": true
+      }
+    },
+    {
+      "type": "EXPRESS POST",
+      "group": "Express Post",
+      "product_id": "E34",
+      "contract": {
+        "valid_from": "2014-01-31",
+        "valid_to": "2015-01-31",
+        "expired": true,
+        "volumetric_pricing": true,
+        "max_item_count": 0,
+        "cubing_factor": 250
+      },
+      "options": {
+        "signature_on_delivery_option": false,
+        "authority_to_leave_option": true
+      }
+    },
+    {
+      "type": "EXPRESS POST W/SIGNATURE",
+      "group": "Express Post",
+      "product_id": "E34S",
+      "contract": {
+        "valid_from": "2014-01-31",
+        "valid_to": "2015-01-31",
+        "expired": true,
+        "volumetric_pricing": true,
+        "max_item_count": 0,
+        "cubing_factor": 250
+      },
+      "options": {
+        "signature_on_delivery_option": true,
+        "authority_to_leave_option": true
+      }
+    },
+    {
+      "type": "PARCEL POST W/SIGNATURE",
+      "group": "Parcel Post",
+      "product_id": "T28S",
+      "contract": {
+        "valid_from": "2014-01-31",
+        "valid_to": "2015-01-31",
+        "expired": true,
+        "volumetric_pricing": true,
+        "max_item_count": 0,
+        "cubing_factor": 250
+      },
+      "options": {
+        "signature_on_delivery_option": true,
+        "authority_to_leave_option": true
+      }
+    }
+  ],
+  "merchant_location_id": "ABC",
+  "credit_blocked": false
+}

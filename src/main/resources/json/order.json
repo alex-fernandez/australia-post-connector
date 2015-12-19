@@ -1,0 +1,61 @@
+{
+  "shipments":[
+    {
+      "shipment_reference":"XYZ-001-01",
+      "customer_reference_1":"Order 001",
+      "customer_reference_2":"SKU-1, SKU-2, SKU-3",
+      "from":{
+        "name":"John Citizen",
+        "lines":[
+          "1 Main Street"
+        ],
+        "suburb":"MELBOURNE",
+        "state":"VIC",
+        "postcode":"3000"
+      },
+      "to":{
+        "name":"Jane Smith",
+        "business_name":"Smith Pty Ltd",
+        "lines":[
+          "123 Centre Road"
+        ],
+        "suburb":"Sydney",
+        "state":"NSW",
+        "postcode":"2000",
+        "phone":"0412345678"
+      },
+      "items":[
+        {
+          "item_reference":"SKU-1",
+          "product_id":"T28S",
+          "length":"10",
+          "height":"10",
+          "width":"10",
+          "weight":"1",
+          "authority_to_leave":false,
+          "partial_delivery_allowed":true
+        },
+        {
+          "item_reference":"SKU-2",
+          "product_id":"T28S",
+          "length":"10",
+          "height":"10",
+          "width":"10",
+          "weight":"1",
+          "authority_to_leave":false,
+          "partial_delivery_allowed":true
+        },
+        {
+          "item_reference":"SKU-3",
+          "product_id":"T28S",
+          "length":"10",
+          "height":"10",
+          "width":"10",
+          "weight":"1",
+          "authority_to_leave":false,
+          "partial_delivery_allowed":true
+        }
+      ]
+    }
+  ]
+}
