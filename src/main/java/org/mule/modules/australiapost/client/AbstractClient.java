@@ -5,6 +5,7 @@ import org.glassfish.jersey.client.ClientConfig;
 import org.mule.api.ConnectionException;
 import org.mule.api.ConnectionExceptionCode;
 import org.mule.modules.australiapost.config.ConnectorConfig;
+import org.mule.modules.australiapost.model.Credential;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -24,7 +25,13 @@ public abstract class AbstractClient {
         this.connectorConfig = connectorConfig;
         this.target = client.target(connectorConfig.getApiUrl());
     }
-
+    protected void overrideCredentialSettings(Credential credential) {
+        if (credential != null) {
+            this.connectorConfig.setAccountNumber(credential.getAccountNumber());
+            this.connectorConfig.setUsername(credential.getUsername());
+            this.connectorConfig.setPassword(credential.getPassword());
+        }
+    }
     protected void evaluateResponse(Response response) throws ConnectionException {
         switch (response.getStatus()) {
             case 200:

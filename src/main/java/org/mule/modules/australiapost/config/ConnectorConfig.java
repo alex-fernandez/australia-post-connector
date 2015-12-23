@@ -26,7 +26,6 @@ public class ConnectorConfig {
 
 
     @Configurable
-    @Default("000000")
     private String accountNumber;
 
     private String username;
@@ -50,6 +49,7 @@ public class ConnectorConfig {
         this.password = password;
         authenticationClient = new AuthenticationClient(this);
         auPostOperationClient = new AuPostOperationClient(this);
+        this.authenticationClient.authenticate();
     }
 
     /**
@@ -57,9 +57,9 @@ public class ConnectorConfig {
      */
     @Disconnect
     public void disconnect() {
-        /*
-         * CODE FOR CLOSING A CONNECTION GOES IN HERE
-         */
+      if (this.authenticationClient != null) {
+          authenticationClient = null;
+      }
     }
 
     /**
@@ -67,8 +67,7 @@ public class ConnectorConfig {
      */
     @ValidateConnection
     public boolean isConnected() {
-        //TODO: Change it to reflect that we are connected.
-        return false;
+        return this.authenticationClient != null;
     }
 
     /**
@@ -111,6 +110,23 @@ public class ConnectorConfig {
 
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+
+    public AuthenticationClient getAuthenticationClient() {
+        return authenticationClient;
+    }
+
+    public void setAuthenticationClient(AuthenticationClient authenticationClient) {
+        this.authenticationClient = authenticationClient;
+    }
+
+    public AuPostOperationClient getAuPostOperationClient() {
+        return auPostOperationClient;
+    }
+
+    public void setAuPostOperationClient(AuPostOperationClient auPostOperationClient) {
+        this.auPostOperationClient = auPostOperationClient;
     }
 
 }

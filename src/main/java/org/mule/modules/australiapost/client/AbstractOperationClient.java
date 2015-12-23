@@ -34,7 +34,7 @@ public class AbstractOperationClient extends AbstractClient {
         return getTarget().path(path);
     }
 
-    public Response get(String path) throws Exception {
+    public Response get(String path) {
         return this.urlBuilder(path)
                 .request()
                 .header(AUTH_HEADER, authClient.getBasicAuthToken())
@@ -43,7 +43,7 @@ public class AbstractOperationClient extends AbstractClient {
 
     }
 
-    public Response post(String path, Entity<?> entity) throws Exception {
+    public Response post(String path, Entity<?> entity) {
         return this.urlBuilder(path)
                 .request()
                 .header(AUTH_HEADER, authClient.getBasicAuthToken())
@@ -51,7 +51,7 @@ public class AbstractOperationClient extends AbstractClient {
                 .accept(MediaType.APPLICATION_JSON).post(entity, Response.class);
     }
 
-    public Response put(String path, Entity<?> entity) throws Exception {
+    public Response put(String path, Entity<?> entity) {
         return this.urlBuilder(path)
                 .request()
                 .header(AUTH_HEADER, authClient.getBasicAuthToken())

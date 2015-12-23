@@ -14,7 +14,7 @@ public class AuthenticationClient extends AbstractOperationClient {
 
     private static final Logger log = LoggerFactory.getLogger(AuthenticationClient.class);
 
-    protected AuthenticationClient(ConnectorConfig connectorConfig) throws ConnectionException {
+    public AuthenticationClient(ConnectorConfig connectorConfig) throws ConnectionException {
         super(connectorConfig);
     }
 
@@ -24,7 +24,7 @@ public class AuthenticationClient extends AbstractOperationClient {
         return String.format("Basic %s:%s", Base64.encodeBase64(userCredentials.getBytes()));
     }
 
-    protected Account authenticate() throws Exception {
+    public Account authenticate() throws ConnectionException  {
         Response response = get("account/" + this.getConnectorConfig().getAccountNumber());
         evaluateResponse(response);
         return response.readEntity(Account.class);
