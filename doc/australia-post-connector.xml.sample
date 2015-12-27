@@ -1,3 +1,3 @@
-<!-- BEGIN_INCLUDE(australia-post:greet) -->
-    <australia-post:greet config-ref="" friend="#[map-payload:friend]" />
-<!-- END_INCLUDE(australia-post:greet) -->
+<!-- BEGIN_INCLUDE(australia-post:create-booking) -->
+    <australia-post:create-booking config-ref="" credential="#[map-payload:credential]" order="#[map-payload:order]" />
+<!-- END_INCLUDE(australia-post:create-booking) -->

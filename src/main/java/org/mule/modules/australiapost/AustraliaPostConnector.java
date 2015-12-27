@@ -1,6 +1,5 @@
 package org.mule.modules.australiapost;
 
-import au.com.australiapost.model.Order;
 import org.mule.api.ConnectionException;
 import org.mule.api.annotations.Config;
 import org.mule.api.annotations.Connector;
@@ -11,6 +10,7 @@ import org.mule.api.annotations.param.Optional;
 import org.mule.modules.australiapost.config.ConnectorConfig;
 import org.mule.modules.australiapost.model.BookingResponse;
 import org.mule.modules.australiapost.model.Credential;
+import org.mule.modules.australiapost.model.Order;
 
 import java.io.IOException;
 
@@ -21,12 +21,14 @@ public class AustraliaPostConnector {
     ConnectorConfig config;
 
     /**
-     * Custom processor
+     * Create Booking
      * <p/>
      * {@sample.xml ../../../doc/australia-post-connector.xml.sample australia-post:create-booking}
      *
-     * @param friend Name of a friend we want to greet
-     * @return The greeting and reply to the selected friend.
+     * @param credential Credential Details
+     * @param order      Order Details
+     * @return Booking Details
+     *
      * @throws IOException Comment for Exception
      */
     @Processor

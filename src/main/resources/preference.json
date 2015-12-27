@@ -1,0 +1,19 @@
+{
+  "type":"PRINT",
+  "groups":[
+    {
+      "group":"Parcel Post",
+      "layout":"A4-4pp",
+      "branded":true,
+      "left_offset":0,
+      "top_offset":0
+    },
+    {
+      "group":"Express Post",
+      "layout":"A4-4pp",
+      "branded":false,
+      "left_offset":0,
+      "top_offset":0
+    }
+  ]
+}
